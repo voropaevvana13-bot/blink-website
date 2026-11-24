@@ -22,9 +22,7 @@
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body {
   background: var(--black);
@@ -48,26 +46,26 @@ header {
 }
 
 .logo {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 2px;
+  color: var(--white);
   font-size: 29px;
   font-weight: 900;
   letter-spacing: -1.5px;
-  color: white;
+  line-height: 1;
   white-space: nowrap;
 }
 
 .logo-mark {
-  width: 31px;
-  height: 31px;
-  flex-shrink: 0;
   display: block;
+  height: 31px;
+  width: auto;
+  object-fit: contain;
+  flex: 0 0 auto;
 }
 
-.logo span {
-  color: var(--red);
-}
+.logo-dot { color: var(--red); }
 
 nav {
   display: flex;
@@ -81,9 +79,7 @@ nav a {
   transition: .2s;
 }
 
-nav a:hover {
-  color: var(--red);
-}
+nav a:hover { color: var(--red); }
 
 .hero {
   min-height: 690px;
@@ -128,9 +124,7 @@ h1 {
   position: relative;
 }
 
-h1 span {
-  color: var(--red);
-}
+h1 span { color: var(--red); }
 
 .subtitle {
   max-width: 550px;
@@ -252,9 +246,7 @@ h1 span {
   margin-bottom: 20px;
 }
 
-.about h2 span {
-  color: var(--red);
-}
+.about h2 span { color: var(--red); }
 
 .about p {
   max-width: 600px;
@@ -275,47 +267,21 @@ footer {
   font-size: 13px;
 }
 
-footer .logo {
-  color: white;
-}
-
 @media(max-width: 750px) {
-  header {
-    padding: 0 20px;
-  }
-
-  nav {
-    gap: 14px;
-  }
-
-  nav a {
-    font-size: 12px;
-  }
-
-  .hero {
-    min-height: 600px;
-  }
-
-  h1 {
-    letter-spacing: -3px;
-  }
-
-  .cards {
-    grid-template-columns: 1fr;
-  }
-
-  .features {
-    padding: 75px 20px;
-  }
-
-  .section-title {
-    font-size: 34px;
-  }
-
+  header { padding: 0 20px; }
+  nav { gap: 14px; }
+  nav a { font-size: 12px; }
+  .hero { min-height: 600px; }
+  h1 { letter-spacing: -3px; }
+  .cards { grid-template-columns: 1fr; }
+  .features { padding: 75px 20px; }
+  .section-title { font-size: 34px; }
   footer {
     justify-content: center;
     text-align: center;
   }
+  .logo { font-size: 27px; }
+  .logo-mark { height: 29px; }
 }
 </style>
 </head>
@@ -324,19 +290,9 @@ footer .logo {
 
 <header>
   <div class="logo">
-    <svg class="logo-mark" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-      <path
-        fill="white"
-        d="M27 7 H59 C82 7 96 20 96 39 C96 52 87 61 72 65 C90 68 99 80 99 92 C99 112 82 100 58 100 H8 Z"
-      />
-      <path
-        fill="#E32636"
-        d="M2 57 L51 40 L35 62 L77 48 L34 92 L41 68 Z"
-      />
-    </svg>
-    link<span>.</span>
+    <img class="logo-mark" src="blink_mark.png" alt="B">
+    <span style="color:#fff">link</span><span class="logo-dot">.</span>
   </div>
-
   <nav>
     <a href="#features">Возможности</a>
     <a href="#about">О проекте</a>
@@ -344,24 +300,16 @@ footer .logo {
 </header>
 
 <main>
-
 <section class="hero">
   <div class="tag">YOUR MUSIC. YOUR WORLD.</div>
-
   <h1>Музыка.<br><span>Без границ.</span></h1>
-
   <p class="subtitle">
     Blink — музыкальное приложение с собственным характером.
     Твоя музыка, твоя коллекция, твои правила.
   </p>
-
   <div class="actions">
-    <a class="button primary" href="#features">
-      Открыть Blink →
-    </a>
-    <a class="button secondary" href="#about">
-      Узнать больше
-    </a>
+    <a class="button primary" href="#features">Открыть Blink →</a>
+    <a class="button secondary" href="#about">Узнать больше</a>
   </div>
 </section>
 
@@ -370,36 +318,22 @@ footer .logo {
   <p class="section-description">
     Всё необходимое для комфортного прослушивания музыки.
   </p>
-
   <div class="cards">
-
     <div class="card">
       <div class="icon">♫</div>
       <h3>Музыка</h3>
-      <p>
-        Слушай любимые композиции и создавай
-        собственное музыкальное пространство.
-      </p>
+      <p>Слушай любимые композиции и создавай собственное музыкальное пространство.</p>
     </div>
-
     <div class="card">
       <div class="icon">◈</div>
       <h3>Удобство</h3>
-      <p>
-        Продуманный интерфейс, простое управление
-        и комфортное использование.
-      </p>
+      <p>Продуманный интерфейс, простое управление и комфортное использование.</p>
     </div>
-
     <div class="card">
       <div class="icon">♡</div>
       <h3>Твоя коллекция</h3>
-      <p>
-        Собирай любимые треки и возвращайся
-        к ним в любое время.
-      </p>
+      <p>Собирай любимые треки и возвращайся к ним в любое время.</p>
     </div>
-
   </div>
 </section>
 
@@ -411,24 +345,13 @@ footer .logo {
     Это только начало.
   </p>
 </section>
-
 </main>
 
 <footer>
   <div class="logo">
-    <svg class="logo-mark" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-      <path
-        fill="white"
-        d="M27 7 H59 C82 7 96 20 96 39 C96 52 87 61 72 65 C90 68 99 80 99 92 C99 112 82 100 58 100 H8 Z"
-      />
-      <path
-        fill="#E32636"
-        d="M2 57 L51 40 L35 62 L77 48 L34 92 L41 68 Z"
-      />
-    </svg>
-    link<span>.</span>
+    <img class="logo-mark" src="blink_mark.png" alt="B">
+    <span style="color:#fff">link</span><span class="logo-dot">.</span>
   </div>
-
   <div>© 2026 Blink. Все права защищены.</div>
 </footer>
 

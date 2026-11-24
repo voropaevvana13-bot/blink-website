@@ -7,6 +7,10 @@
 <meta name="description" content="Blink — твой музыкальный мир.">
 <title>Blink — Music Player</title>
 
+<!-- Фирменная иконка Blink во вкладке браузера -->
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+
 <style>
 :root {
   --black: #090909;
@@ -23,7 +27,6 @@
 }
 
 html { scroll-behavior: smooth; }
-
 body {
   background: var(--black);
   color: var(--white);
@@ -48,24 +51,16 @@ header {
 .logo {
   display: inline-flex;
   align-items: center;
-  gap: 2px;
-  color: var(--white);
-  font-size: 29px;
-  font-weight: 900;
-  letter-spacing: -1.5px;
   line-height: 1;
   white-space: nowrap;
 }
 
-.logo-mark {
+.logo-image {
   display: block;
-  height: 31px;
+  height: 34px;
   width: auto;
   object-fit: contain;
-  flex: 0 0 auto;
 }
-
-.logo-dot { color: var(--red); }
 
 nav {
   display: flex;
@@ -280,18 +275,15 @@ footer {
     justify-content: center;
     text-align: center;
   }
-  .logo { font-size: 27px; }
-  .logo-mark { height: 29px; }
+  .logo-image { height: 30px; }
 }
 </style>
 </head>
 
 <body>
-
 <header>
   <div class="logo">
-    <img class="logo-mark" src="blink_mark.png" alt="B">
-    <span style="color:#fff">link</span><span class="logo-dot">.</span>
+    <img class="logo-image" src="/blink_wordmark.png" alt="Blink.">
   </div>
   <nav>
     <a href="#features">Возможности</a>
@@ -349,8 +341,7 @@ footer {
 
 <footer>
   <div class="logo">
-    <img class="logo-mark" src="blink_mark.png" alt="B">
-    <span style="color:#fff">link</span><span class="logo-dot">.</span>
+    <img class="logo-image" src="/blink_wordmark.png" alt="Blink.">
   </div>
   <div>© 2026 Blink. Все права защищены.</div>
 </footer>

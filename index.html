@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -49,9 +48,21 @@ header {
 }
 
 .logo {
+  display: flex;
+  align-items: center;
+  gap: 2px;
   font-size: 29px;
   font-weight: 900;
   letter-spacing: -1.5px;
+  color: white;
+  white-space: nowrap;
+}
+
+.logo-mark {
+  width: 31px;
+  height: 31px;
+  flex-shrink: 0;
+  display: block;
 }
 
 .logo span {
@@ -312,7 +323,20 @@ footer .logo {
 <body>
 
 <header>
-  <div class="logo">Blink<span>.</span></div>
+  <div class="logo">
+    <svg class="logo-mark" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <path
+        fill="white"
+        d="M27 7 H59 C82 7 96 20 96 39 C96 52 87 61 72 65 C90 68 99 80 99 92 C99 112 82 100 58 100 H8 Z"
+      />
+      <path
+        fill="#E32636"
+        d="M2 57 L51 40 L35 62 L77 48 L34 92 L41 68 Z"
+      />
+    </svg>
+    link<span>.</span>
+  </div>
+
   <nav>
     <a href="#features">Возможности</a>
     <a href="#about">О проекте</a>
@@ -391,7 +415,20 @@ footer .logo {
 </main>
 
 <footer>
-  <div class="logo">Blink<span>.</span></div>
+  <div class="logo">
+    <svg class="logo-mark" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <path
+        fill="white"
+        d="M27 7 H59 C82 7 96 20 96 39 C96 52 87 61 72 65 C90 68 99 80 99 92 C99 112 82 100 58 100 H8 Z"
+      />
+      <path
+        fill="#E32636"
+        d="M2 57 L51 40 L35 62 L77 48 L34 92 L41 68 Z"
+      />
+    </svg>
+    link<span>.</span>
+  </div>
+
   <div>© 2026 Blink. Все права защищены.</div>
 </footer>
 
